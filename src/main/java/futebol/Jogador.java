@@ -6,7 +6,6 @@ public abstract class Jogador extends Pessoa{
     protected int gols;
     protected float bonusGol = 1000.0f;
     protected float bonusJogo = 500.0f;
-    protected int titulos;
     protected String posicao;
 
 
@@ -47,14 +46,6 @@ public abstract class Jogador extends Pessoa{
     }
     public Jogador setBonusJogo(float bonusJogo) {
         this.bonusJogo = bonusJogo;
-        return this;
-    }
-
-    public int getTitulos() {
-        return titulos;
-    }
-    public Jogador setTitulos(int titulos) {
-        this.titulos = titulos;
         return this;
     }
 

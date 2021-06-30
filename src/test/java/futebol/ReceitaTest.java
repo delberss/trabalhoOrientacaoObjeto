@@ -66,4 +66,25 @@ class ReceitaTest {
         Receita receita = new Receita();
         assertEquals(3000.0f + " - Lucro", receita.calculaReceitaMensal(listaSocios, listaJogadores));
     }
+    @Test
+    void deveRetornarReceitaPrejuizoMensal() {
+        SocioTorcedor socio1 = new SocioTorcedor();
+
+        Jogador jogador1 = new JogadorAtacante();
+        jogador1.setGols(10);
+
+        Jogador jogador2 = new JogadorDefensor();
+        jogador2.setPartidas(10);
+
+        List<SocioTorcedor> listaSocios = new ArrayList<SocioTorcedor>();
+        listaSocios.add(socio1);
+
+        List<Jogador> listaJogadores = new ArrayList<Jogador>();
+
+        listaJogadores.add(jogador1);
+        listaJogadores.add(jogador2);
+
+        Receita receita = new Receita();
+        assertEquals(-7000.0f + " - Prejuizo", receita.calculaReceitaMensal(listaSocios, listaJogadores));
+    }
 }
